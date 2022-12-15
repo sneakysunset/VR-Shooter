@@ -6,6 +6,8 @@ public class Shoot : MonoBehaviour
 {
     public float range = 1000;
     public float damage = 10;
+    public float magazin = 30;
+    public float currentAmmoes;
     public float cooldown = .3f;
     private float timer;
     public UnityEvent particleOnFireEvent;
@@ -17,15 +19,20 @@ public class Shoot : MonoBehaviour
     public float bulletDeviationStrength = .1f;
     public float shellDeviationStrength = .5f;
     public LayerMask raycastLayerMask;
+    bool startReloading;
+    float reloadingCD;
+    public float timeBeforeReloadingComplete = 1f;
     private void Start()
     {
         timer = cooldown;
+        currentAmmoes = magazin;
     }
 
     private void Update()
     {
         timer += Time.deltaTime;
         if (firing) OnHold();
+        if (startReloading) reloadingCD += Time.deltaTime;
     }
 
 
@@ -33,11 +40,14 @@ public class Shoot : MonoBehaviour
 
     void OnHold()
     {
-        if (timer > cooldown)
+        if (timer > cooldown && currentAmmoes > 0)
         {
+
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, range, raycastLayerMask))
             {
+                currentAmmoes--;
+
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/Bullet Impact Metal");
                 particleOnFireEvent.Invoke();
                 print(hit.transform.name);
@@ -70,11 +80,12 @@ public class Shoot : MonoBehaviour
             return;
         }
 
-        if (timer > cooldown)
+        if (timer > cooldown && currentAmmoes > 0)
         {
             RaycastHit hit;
             if(Physics.Raycast(transform.position, transform.forward, out hit, range))
             {
+                currentAmmoes--;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/Bullet Impact Metal");
                 particleOnFireEvent.Invoke();
                 Target target = hit.transform.GetComponent<Target>();
@@ -100,6 +111,12 @@ public class Shoot : MonoBehaviour
 
     public void OnGrab()
     {
+        startReloading = false;
+        if(reloadingCD > timeBeforeReloadingComplete)
+        {
+            currentAmmoes = magazin;
+        }
+
         foreach(Transform children in transform)
         {
             children.gameObject.layer = 2;
@@ -109,9 +126,16 @@ public class Shoot : MonoBehaviour
     public void OnEndGrab()
     {
         firing = false;
+        startReloading = true;
+        reloadingCD = 0;
         foreach (Transform children in transform)
         {
             children.gameObject.layer = 0;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        startReloading = false;
     }
 }
