@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2afd834c-316f-4086-8839-d241c3ded65d}">
+		<property name="assetPath">
+			<value>Guns, Pistol, Revolver, Shot x4 SND6028 5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.54356249999999995</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1dc715fb-ab9c-494b-a597-1e6e56864601}</destination>
+		</relationship>
+	</object>
+</objects>
