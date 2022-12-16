@@ -72,7 +72,7 @@ public class Shoot : MonoBehaviour
         }
         else if(timer > cooldown)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/NoAmmoes");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/NoAmmo");
             timer = 0;
         }
     }
@@ -120,6 +120,7 @@ public class Shoot : MonoBehaviour
         if(reloadingCD > timeBeforeReloadingComplete)
         {
             currentAmmoes = magazin;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/Reload");
         }
 
         foreach(Transform children in transform)
@@ -133,6 +134,7 @@ public class Shoot : MonoBehaviour
         firing = false;
         startReloading = true;
         reloadingCD = 0;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/Weapon offHands");
         foreach (Transform children in transform)
         {
             children.gameObject.layer = 0;

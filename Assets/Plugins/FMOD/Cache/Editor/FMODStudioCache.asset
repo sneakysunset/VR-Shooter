@@ -15,11 +15,65 @@ MonoBehaviour:
   Path: FMOD/VR FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638067504690896961
+  lastModified: 638067912003460399
   FileSizes:
   - Name: Desktop
-    Value: 63296
+    Value: 1294624
   Exists: 1
+--- !u!114 &-4427308567666734391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/New Event
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/New Event
+  Guid:
+    Data1: -140044512
+    Data2: 1125033397
+    Data3: -823269188
+    Data4: 1546747024
+  Banks:
+  - {fileID: -7535030695684378692}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2947217411363034593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zombies/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/Zombies/Attack
+  Guid:
+    Data1: -251965572
+    Data2: 1180994986
+    Data3: -323983220
+    Data4: -138793433
+  Banks:
+  - {fileID: -7535030695684378692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2851163002990491058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,11 +89,65 @@ MonoBehaviour:
   Path: FMOD/VR FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638067504690896961
+  lastModified: 638067912003509350
   FileSizes:
   - Name: Desktop
-    Value: 876
+    Value: 1196
   Exists: 1
+--- !u!114 &-1785408395112090760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Shooting/Weapon offHands
+  m_EditorClassIdentifier: 
+  Path: event:/Shooting/Weapon offHands
+  Guid:
+    Data1: 1364196059
+    Data2: 1205416316
+    Data3: 1696832402
+    Data4: -1524758641
+  Banks:
+  - {fileID: -7535030695684378692}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1357764819529833593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Shooting/Reload
+  m_EditorClassIdentifier: 
+  Path: event:/Shooting/Reload
+  Guid:
+    Data1: 1668977983
+    Data2: 1272787108
+    Data3: -1754555993
+    Data4: 1736460569
+  Banks:
+  - {fileID: -7535030695684378692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,14 +166,48 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 4136345550522685889}
   - {fileID: 3850285303988812990}
-  - {fileID: 8090720508176683735}
+  - {fileID: 4485546738348296575}
+  - {fileID: -1357764819529833593}
+  - {fileID: -1785408395112090760}
+  - {fileID: 3552346487634621176}
+  - {fileID: 6141585240720267359}
+  - {fileID: -4427308567666734391}
+  - {fileID: 7076569989426547327}
+  - {fileID: -2947217411363034593}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7535030695684378692}
   StringsBanks:
   - {fileID: -2851163002990491058}
-  cacheTime: 638067504690896961
+  cacheTime: 638067912003509350
   cacheVersion: 131591
+--- !u!114 &3552346487634621176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Shooting/ShellOnGround
+  m_EditorClassIdentifier: 
+  Path: event:/Shooting/ShellOnGround
+  Guid:
+    Data1: -1375047789
+    Data2: 1305477902
+    Data3: 1571163811
+    Data4: 1900360413
+  Banks:
+  - {fileID: -7535030695684378692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3850285303988812990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +262,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8090720508176683735
+--- !u!114 &4485546738348296575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,14 +272,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Shooting/NoAmmoes
+  m_Name: event:/Shooting/NoAmmo
   m_EditorClassIdentifier: 
-  Path: event:/Shooting/NoAmmoes
+  Path: event:/Shooting/NoAmmo
   Guid:
-    Data1: -101492146
-    Data2: 1220497600
-    Data3: 801429661
-    Data4: 389136085
+    Data1: 59478835
+    Data2: 1224029343
+    Data3: 1591382690
+    Data4: 189507245
+  Banks:
+  - {fileID: -7535030695684378692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6141585240720267359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zombies/Walk
+  m_EditorClassIdentifier: 
+  Path: event:/Zombies/Walk
+  Guid:
+    Data1: 1241426180
+    Data2: 1205813151
+    Data3: 408528256
+    Data4: 2140831532
+  Banks:
+  - {fileID: -7535030695684378692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7076569989426547327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zombies/ImpactZombie
+  m_EditorClassIdentifier: 
+  Path: event:/Zombies/ImpactZombie
+  Guid:
+    Data1: 729253499
+    Data2: 1108034727
+    Data3: -1244041834
+    Data4: 1354672346
   Banks:
   - {fileID: -7535030695684378692}
   IsStream: 0
