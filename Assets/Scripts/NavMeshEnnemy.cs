@@ -44,17 +44,18 @@ public class NavMeshEnnemy : MonoBehaviour
         }
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk")) navMesh.speed = ogSpeed;
+            
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("End")) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DeathTriggerZone") && !flag)
+        if (other.CompareTag("DeathTriggerZone"))
         {
             animator.Play("Attack", 0);
             navMesh.speed = 0;
 
             
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
