@@ -70,6 +70,11 @@ public class Shoot : MonoBehaviour
             }
             timer = 0;
         }
+        else if(timer > cooldown)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/NoAmmoes");
+            timer = 0;
+        }
     }
 
     public void ThrowRayCast()

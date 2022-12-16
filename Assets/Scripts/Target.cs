@@ -10,12 +10,12 @@ public class Target : MonoBehaviour
     public typeOfSurface surface;
     public bool destroyable = false;
     public GameObject metalPSYS;
-
+    public GameObject humanPSYS;
     public void TakeDamage(float damage, float distance, Vector3 pointPos, Vector3 normal)
     {
         StartCoroutine(ImpactDelayed(distance, pointPos, normal));
         if(destroyable) HP -= damage;
-        if (HP <= 0) Destroy(this.gameObject);
+        //if (HP <= 0) Destroy(this.gameObject);
     }
 
     IEnumerator ImpactDelayed(float distance, Vector3 pointPos, Vector3 normal)
@@ -25,7 +25,7 @@ public class Target : MonoBehaviour
         {
             case typeOfSurface.metal:
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Shooting/Bullet Impact Metal", pointPos);
-                Transform tr = Instantiate(metalPSYS, pointPos, Quaternion.identity).transform;
+                Transform tr = Instantiate(metalPSYS, pointPos, Quaternion.identity, transform).transform;
                 tr.up = normal;
                 break;
             case typeOfSurface.wood:
@@ -33,6 +33,7 @@ public class Target : MonoBehaviour
             case typeOfSurface.glass:
                 break;
             case typeOfSurface.human:
+                Transform trH = Instantiate(humanPSYS, pointPos, Quaternion.identity, transform).transform;
                 break;
             default:
                 break;
